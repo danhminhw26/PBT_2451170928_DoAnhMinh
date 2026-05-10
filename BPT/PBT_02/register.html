@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>Thông tin cá nhân</legend>
+        <form action="#" method="post">
+          <label for="username">Họ tên:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+          /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+          <input type="submit" value="Register" />
+        </form>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Tài khoản</legend>
+        <form action="#" method="post">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+          /><br /><br />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br /><br />
+          <input type="submit" value="Register" />
+        </form>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>Thông tin giao hàng</legend>
+        <form action="#" method="post">
+          <label for="city">Thành Phố:</label>
+          <select name="city" id="city">
+            <option value="nghean">Nghệ An</option>
+            <option value="hanoi">Hà Nội</option>
+            <option value="hcm">Hồ Chí Minh</option>
+            <option value="phutho">Phú Thọ</option>
+            <option value="36">Thanh Hóa</option></select
+          ><br /><br />
+          <label for="qh">Quận/Huyện:</label>
+          <input type="text" id="qh" name="qh" required /><br /><br />
+
+          <label for="dchi">Địa chỉ chi tiết:</label><br>
+          <textarea name="dchi" id="dchi" required rows="3">
+            ví dụ: Số nhà, tên đường, phường/xã, thôn/bản
+          </textarea><br /><br />
+          <input type="submit" value="Register" />
+        </form>
+      </fieldset>
+      <button type="submit">chot</button>
+      <button type="reset">Reset</button>
+      
+    </div>
+  </body>
+</html>

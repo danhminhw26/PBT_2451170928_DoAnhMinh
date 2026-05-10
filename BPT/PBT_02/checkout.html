@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <h1>Thanh Toan</h1>
+
+    <main>
+      <section>
+        <h2>Gio Hang</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>San Pham</th>
+              <th>Don Gia</th>
+              <th>So Luong</th>
+              <th>Thanh Tien</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Tai Nghe</td>
+              <td>1500000</td>
+              <td>1</td>
+              <td>1500000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Dong Ho Thong Minh</td>
+              <td>3200000</td>
+              <td>2</td>
+              <td>6400000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>May Anh</td>
+              <td>8500000</td>
+              <td>1</td>
+              <td>8500000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Tong Cong</td>
+              <td>17450000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2>Thanh Toan</h2>
+        <form method="POST" action="/checkout">
+          <fieldset>
+            <legend>Phuong Thuc</legend>
+            <label><input type="radio" name="payment" value="cod" required> COD</label>
+            <label><input type="radio" name="payment" value="transfer" required> Chuyen Khoan</label>
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>Ma Giam Gia</legend>
+            <input type="text" name="discount" placeholder="SALE2026" pattern="SALE\d{4}">
+          </fieldset>
+
+          <fieldset>
+            <legend>Ghi Chu</legend>
+            <textarea name="notes" rows="3" cols="40"></textarea>
+          </fieldset>
+
+          <h2>Giao Hang</h2>
+
+          <fieldset>
+            <legend>Ngay Giao</legend>
+            <input type="date" name="delivery_date" required min="">
+          </fieldset>
+
+          <fieldset>
+            <legend>Khung Gio</legend>
+            <select name="time_slot" required>
+              <option value="">--Chon--</option>
+              <option value="morning">sáng</option>
+              <option value="afternoon">chiều</option>
+              <option value="evening">Tối</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Thoi Gian Giao (Ngay)</legend>
+            <input type="range" name="day" min="1" max="7" step="1" value="3">
+            
+          </fieldset>
+
+          <fieldset>
+            <legend>Tim San Pham</legend>
+            <input type="text" name="product" list="products">
+            <datalist id="products">
+              <option value="Tai Nghe">
+              <option value="Dong Ho Thong Minh">
+              <option value="May Anh">
+              <option value="Ban Phim">
+              <option value="Chuot">
+              <option value="Loa">
+            </datalist>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tong Tien</legend>
+            <p>Tong: <output>17450000</output> VND</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tich Luy</legend>
+            <meter min="0" max="100" value="65"></meter> 65/100
+          </fieldset>
+
+          <fieldset>
+            <legend>Tien Do</legend>
+            <progress max="100" value="75"></progress> 75%
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+  
+</body>
+</html>

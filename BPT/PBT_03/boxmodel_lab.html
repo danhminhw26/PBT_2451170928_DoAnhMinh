@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model Lab</title>
+    <link rel="stylesheet" href="boxmodel.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Box Model Lab</h1>
+      <p>
+        So sánh hai hộp có cùng <code>width</code>, <code>padding</code> và
+        <code>border</code> nhưng khác thuộc tính <code>box-sizing</code>.
+      </p>
+
+      <section class="box-demo">
+        <div class="box box-content">
+          <h2>Hộp 1</h2>
+          <p><strong>box-sizing:</strong> content-box</p>
+          <p>width: 300px</p>
+          <p>padding: 20px</p>
+          <p>border: 5px solid</p>
+        </div>
+        <div class="box box-border">
+          <h2>Hộp 2</h2>
+          <p><strong>box-sizing:</strong> border-box</p>
+          <p>width: 300px</p>
+          <p>padding: 20px</p>
+          <p>border: 5px solid</p>
+        </div>
+      </section>
+
+      <section class="explanation">
+        <h2>Hướng dẫn đo</h2>
+        <p>
+          Mở DevTools, chọn hộp và chuyển sang tab <strong>Computed</strong> để
+          xem box model diagram.
+        </p>
+        <p>
+          Dòng thông tin <em>width</em> trong box model sẽ cho thấy chiều rộng
+          thực tế của mỗi hộp.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  background-color: #3b4f8b;
+  color: #3d3939;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 20px;
+}
+.navigation a {
+  margin-right: 10px;
+  text-decoration: dashed;
+  color: #3d3939;
+  align-items: center;
+  justify-content: center;
+}
+a:hover {
+  color: #909bbc;
+  text-decoration-color: #c3c8d8;
+  transition: 0.3s;
+}
+.container {
+  margin-top: 100px;
+}
+.stickysidebar {
+  position: fixed;
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  top: 80px;
+  right: 0;
+}
+.product-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  background: white;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2980b9;
+  color: white;
+
+  cursor: pointer;
+}
+.sanpham .badge {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: red;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+}

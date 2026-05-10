@@ -1,0 +1,49 @@
+/* Specificity: 0,0,1 */
+p {
+  color: #4a5568;
+}
+
+/* Specificity: 0,0,2 */
+body p {
+  color: #6b7280;
+}
+
+/* Specificity: 0,1,0 */
+.text {
+  color: #2563eb;
+}
+
+/* Specificity: 0,1,0 */
+.highlight {
+  color: #16a34a;
+}
+
+/* Specificity: 0,1,1 */
+p.text {
+  color: #f97316;
+}
+
+/* Specificity: 0,1,1 */
+p.highlight {
+  color: #db2777;
+}
+
+/* Specificity: 0,2,0 */
+.text.highlight {
+  color: #0ea5e9;
+}
+
+/* Specificity: 0,2,1 */
+p.text.highlight {
+  color: #a855f7;
+}
+
+/* Specificity: 1,0,0 */
+#demo {
+  color: #ea580c;
+}
+
+/* Specificity: 1,2,0 */
+#demo.text.highlight {
+  color: #0f766e;
+}

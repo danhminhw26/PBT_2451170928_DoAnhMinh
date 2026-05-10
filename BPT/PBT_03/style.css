@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef3f7;
+  color: #1f2937;
+    line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #2b6cb0 0%, #4c51bf 100%);
+  color: #ffffff;
+  padding: 40px 10px;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  color: #5f4848;
+  text-decoration: none;
+}
+
+
+main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+#about article,
+#contact,
+#skills {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 18px;
+}
+
+figure img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 4px solid #f8fafc;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+figure figcaption {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+table.skill-table {
+  width: 100%;
+  border-collapse:collapse;
+}
+
+table.skill-table th,
+table.skill-table td {
+  padding: 14px 12px;
+  border: 1px solid #cbd5e0;
+  text-align: left;
+}
+
+table.skill-table thead {
+  background: #2d3748;
+  color: #ffffff;
+}
+
+table.skill-table tbody tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+table.skill-table tbody tr:hover {
+  background: #a8aeb6;
+}
+
+table.skill-table tfoot td {
+  background: #edf2f7;
+  font-style: italic;
+}
+
+aside#contact {
+  max-width: 960px;
+  margin: 0 auto 24px;
+  padding: 24px 20px;
+}
+
+footer {
+  background: #2d3748;
+  color: #cbd5e0;
+  text-align: center;
+  padding: 16px 20px;
+}
+
+footer p {
+  margin: 0;
+}
