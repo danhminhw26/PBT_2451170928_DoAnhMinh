@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Product Page</title>
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">TechStore</div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">☰</div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- SIDEBAR (FILTERS) -->
+      <aside class="sidebar">
+        <h3>Filters</h3>
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label><input type="checkbox" /> Laptops</label>
+          <label><input type="checkbox" /> Phones</label>
+          <label><input type="checkbox" /> Tablets</label>
+          <label><input type="checkbox" /> Accessories</label>
+        </div>
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <label><input type="radio" name="price" /> Under $500</label>
+          <label><input type="radio" name="price" /> $500 - $1000</label>
+          <label><input type="radio" name="price" /> $1000 - $2000</label>
+          <label><input type="radio" name="price" /> Above $2000</label>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS GRID -->
+      <section class="products">
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=1" alt="Gaming Laptop" />
+          <h3>Gaming Laptop Pro</h3>
+          <p class="price">$1200</p>
+          <p class="description">High-performance laptop for gaming</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=2" alt="Product" />
+          <h3>Wireless Headphones</h3>
+          <p class="price">$150</p>
+          <p class="description">Premium sound quality headphones</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=3" alt="Product" />
+          <h3>4K Monitor</h3>
+          <p class="price">$450</p>
+          <p class="description">Ultra-clear 4K display monitor</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=4" alt="Product" />
+          <h3>Mechanical Keyboard</h3>
+          <p class="price">$120</p>
+          <p class="description">RGB mechanical gaming keyboard</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=5" alt="Product" />
+          <h3>Gaming Mouse</h3>
+          <p class="price">$80</p>
+          <p class="description">Precision gaming mouse</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=6" alt="Product" />
+          <h3>USB-C Cable</h3>
+          <p class="price">$25</p>
+          <p class="description">Fast charging USB-C cable</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=7" alt="Product" />
+          <h3>Webcam HD</h3>
+          <p class="price">$60</p>
+          <p class="description">1080p HD webcam for streaming</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300/200?random=8" alt="Product" />
+          <h3>Phone Stand</h3>
+          <p class="price">$30</p>
+          <p class="description">Adjustable phone stand</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </section>
+
+      <!-- ADS BAR (DESKTOP ONLY) -->
+      <aside class="ads-bar">
+        <div class="ad-box">
+          <h4>Featured Deal</h4>
+          <p>Up to 50% OFF</p>
+          <p class="ad-text">Premium Electronics</p>
+        </div>
+        <div class="ad-box">
+          <h4>Fast Shipping</h4>
+          <p>Free Shipping</p>
+          <p class="ad-text">On orders over $100</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <p>Your trusted tech store for quality electronics</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: info@techstore.com</p>
+          <p>Phone: +1-800-TECH-123</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TechStore. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
+      </section>
+      <section class="ads">ADS</section>
+      <div class="products"></div>
+    </div>
+    <footer class="footer">
+      <p>app cua toi</p>
+    </footer>
+  </body>
+</html>

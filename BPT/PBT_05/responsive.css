@@ -1,0 +1,413 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== HEADER (MOBILE FIRST) ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #2d2d80, #da6f6f);
+  padding: 15px;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.navigation {
+  display: none;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  display: block;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #2d2d80;
+  padding: 10px 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== SIDEBAR (HIDDEN ON MOBILE) ===== */
+.sidebar {
+  display: none;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.filter-group label {
+  display: block;
+  padding: 8px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* ===== PRODUCTS GRID (MOBILE FIRST = 1 COLUMN) ===== */
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #2d2d80;
+}
+
+.card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #da6f6f;
+  margin-bottom: 8px;
+}
+
+.card .description {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.btn-buy {
+  background-color: #2d2d80;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #da6f6f;
+}
+
+/* ===== ADS BAR (HIDDEN ON MOBILE) ===== */
+.ads-bar {
+  display: none;
+}
+
+.ad-box {
+  background: linear-gradient(135deg, #2d2d80, #da6f6f);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ad-box h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.ad-box p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.ad-box .ad-text {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #2d2d80;
+  color: white;
+  padding: 30px 15px 15px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.footer-section p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #b0b0ff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 13px;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+
+/* ===== TABLET BREAKPOINT (≥ 768px) ===== */
+@media (min-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    flex: 1;
+    margin: 0 30px;
+  }
+
+  .navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
+  }
+
+  .navigation a:hover {
+    opacity: 0.8;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .sidebar {
+    display: block;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    flex-shrink: 0;
+  }
+
+  .sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2d2d80;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    flex: 1;
+  }
+
+  .ads-bar {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card .price {
+    font-size: 18px;
+  }
+}
+
+/* ===== DESKTOP BREAKPOINT (≥ 1024px) ===== */
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .navigation ul {
+    gap: 40px;
+  }
+
+  .navigation a {
+    font-size: 16px;
+  }
+
+  .container {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .sidebar {
+    width: 220px;
+    order: 1;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+    order: 2;
+    flex: 1;
+  }
+
+  .ads-bar {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    order: 3;
+    height: fit-content;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card .price {
+    font-size: 20px;
+  }
+
+  .card .description {
+    font-size: 13px;
+  }
+
+  .btn-buy {
+    font-size: 14px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
