@@ -206,3 +206,165 @@ Class tương đương d-none d-md-flex
 hidden md:flex
 hidden → display none
 md:flex → từ md trở lên display flex
+Câu C1 (10đ) — Tailwind vs CSS thuần
+1. HTML file size (CSS thuần vs Tailwind)
+✔ CSS thuần
+
+Ví dụ component navbar + card:
+
+HTML ngắn
+nhưng phải viết thêm CSS riêng
+<div class="navbar"></div>
+<div class="card"></div>
+
+CSS:
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+➡ Tổng: 2 file (HTML + CSS)
+
+✔ Tailwind
+<div class="flex justify-between p-4"></div>
+
+<div class="border p-5"></div>
+
+➡ CSS file gần như không cần viết thêm
+
+➡ Nhưng HTML sẽ dài hơn
+
+📊 So sánh
+Tiêu chí	CSS thuần	Tailwind
+HTML size	nhỏ	dài hơn
+CSS size	lớn	gần như không cần
+Tổng file	2 file	1 file
+2. Maintainability (dễ đọc / dễ sửa)
+CSS thuần
+
+❌ Khó debug khi project lớn:
+
+phải tìm class trong file CSS
+dễ conflict class
+dễ override nhầm
+Tailwind
+
+✔ dễ sửa trực tiếp ngay HTML:
+
+<div class="p-4 bg-blue-500 text-white rounded">
+
+✔ thấy ngay style ở đâu
+
+❌ nhưng:
+
+HTML dài
+khó nhìn nếu quá nhiều class
+Kết luận:
+CSS thuần	Tailwind
+dễ tách logic	dễ sửa nhanh
+khó maintain project lớn	dễ maintain UI component
+3. Reusability
+CSS thuần
+
+Dùng lại bằng class:
+
+.btn-primary {
+    background: blue;
+    padding: 10px;
+}
+
+✔ dễ reuse
+
+Tailwind
+
+Dùng lại bằng:
+
+✔ @apply
+.btn-primary {
+    @apply bg-blue-500 text-white px-4 py-2 rounded;
+}
+
+➡ tạo class reusable giống CSS thuần
+
+So sánh reuse
+CSS thuần	Tailwind
+class tự viết	dùng @apply
+component hóa rõ	utility-based
+Câu C2 (10đ) — Performance
+1. Vì sao Tailwind CSS file cuối nhỏ hơn Bootstrap?
+Bootstrap:
+build sẵn tất cả components:
+modal
+carousel
+dropdown
+grid system
+utilities
+
+➡ file CSS rất lớn (nhiều KB đến MB)
+
+Tailwind:
+chỉ cung cấp utility classes
+không build sẵn component
+
+➡ chỉ generate class bạn đang dùng
+
+2. Tailwind PurgeCSS / JIT là gì?
+✔ PurgeCSS (hoặc content scanning)
+
+Tailwind sẽ:
+
+👉 scan toàn bộ HTML / JS / Vue / React
+
+tìm class đang dùng
+❌ loại bỏ:
+class không dùng
+CSS dư thừa
+
+Ví dụ:
+
+bg-red-500 (không dùng → bị xóa)
+text-xl (không dùng → bị xóa)
+✔ chỉ giữ lại:
+class thực sự xuất hiện trong code
+✔ JIT (Just-In-Time)
+tạo CSS theo nhu cầu realtime
+ví dụ:
+p-13
+
+➡ Tailwind tự generate nếu có dùng
+
+3. Khi nào KHÔNG nên dùng TailwindCSS?
+❌ Trường hợp 1: Project nhỏ / landing page đơn giản
+
+Ví dụ:
+
+website 1 trang
+giới thiệu công ty
+
+👉 Tailwind sẽ:
+
+quá nhiều class
+không cần thiết
+
+✔ CSS thuần nhanh hơn
+
+❌ Trường hợp 2: Team không quen Tailwind
+
+Ví dụ:
+
+team backend làm UI nhẹ
+người không biết utility-first
+
+👉 sẽ:
+
+khó đọc class
+khó maintain
+
+✔ Bootstrap / CSS truyền thống dễ hơn
