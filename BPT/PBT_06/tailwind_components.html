@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+    <!-- Horizontal Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">TailwindUI</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#buttons" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Buttons</a>
+                    <a href="#cards" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Cards</a>
+                    <a href="#forms" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Forms</a>
+                    <a href="#alerts" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Alerts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Vertical Sidebar -->
+        <aside class="hidden lg:block w-64 bg-white dark:bg-gray-800 shadow-md h-screen sticky top-16 overflow-y-auto">
+            <div class="p-6 space-y-4">
+                <div class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Components</div>
+                <ul class="space-y-2">
+                    <li><a href="#buttons" class="block px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Buttons</a></li>
+                    <li><a href="#cards" class="block px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Cards</a></li>
+                    <li><a href="#forms" class="block px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Forms</a></li>
+                    <li><a href="#alerts" class="block px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Alerts</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 sm:p-8 lg:p-12">
+
+            <!-- Buttons Section -->
+            <section id="buttons" class="mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 pb-4 border-b-2 border-blue-600">Buttons</h2>
+
+                <!-- Button Variants -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Button Variants</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Primary -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Primary</p>
+                            <button class="px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Primary Button
+                            </button>
+                        </div>
+
+                        <!-- Secondary -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Secondary</p>
+                            <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Secondary Button
+                            </button>
+                        </div>
+
+                        <!-- Outline -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Outline</p>
+                            <button class="px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Outline Button
+                            </button>
+                        </div>
+
+                        <!-- Disabled -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Disabled</p>
+                            <button disabled class="px-4 py-2 bg-gray-400 dark:bg-gray-600 text-gray-300 dark:text-gray-500 rounded-lg cursor-not-allowed opacity-50 font-medium">
+                                Disabled Button
+                            </button>
+                        </div>
+
+                        <!-- Loading (Spinner) -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Loading</p>
+                            <button class="px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium flex items-center gap-2">
+                                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Loading...
+                            </button>
+                        </div>
+
+                        <!-- Success -->
+                        <div>
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Success</p>
+                            <button class="px-4 py-2 bg-green-600 dark:bg-green-500 text-white rounded-lg hover:bg-green-700 dark:hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Success Button
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button Sizes -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Button Sizes</h3>
+                    <div class="flex flex-col sm:flex-row gap-4 items-center">
+                        <!-- Small -->
+                        <div class="flex flex-col items-center">
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Small</p>
+                            <button class="px-2 py-1 text-sm bg-blue-600 dark:bg-blue-500 text-white rounded hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors font-medium">
+                                Small
+                            </button>
+                        </div>
+
+                        <!-- Medium -->
+                        <div class="flex flex-col items-center">
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Medium</p>
+                            <button class="px-4 py-2 text-base bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors font-medium">
+                                Medium
+                            </button>
+                        </div>
+
+                        <!-- Large -->
+                        <div class="flex flex-col items-center">
+                            <p class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Large</p>
+                            <button class="px-6 py-3 text-lg bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors font-bold">
+                                Large
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards Section -->
+            <section id="cards" class="mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 pb-4 border-b-2 border-blue-600">Cards</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-600 dark:to-blue-800 group-hover:scale-105 transition-transform duration-300"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Product Card</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">This is a product card with image, title, and description.</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium text-sm">
+                                    Add to Cart
+                                </button>
+                                <button class="flex-1 px-4 py-2 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors font-medium text-sm">
+                                    Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden text-center">
+                        <div class="h-24 bg-gradient-to-r from-purple-400 to-pink-400 dark:from-purple-600 dark:to-pink-600"></div>
+                        <div class="px-6 pb-6">
+                            <div class="w-24 h-24 bg-gray-300 dark:bg-gray-700 rounded-full border-4 border-white dark:border-gray-800 mx-auto -mt-12 mb-4 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-600 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">John Doe</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">UI/UX Designer</p>
+                            <button class="w-full px-4 py-2 bg-purple-600 dark:bg-purple-500 text-white rounded-lg hover:bg-purple-700 dark:hover:bg-purple-600 transition-colors font-medium text-sm">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-blue-600 dark:hover:border-blue-400 p-8 relative">
+                        <div class="absolute top-0 right-0 bg-blue-600 dark:bg-blue-500 text-white px-3 py-1 rounded-bl-lg text-sm font-bold">Popular</div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Professional</h3>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-blue-600 dark:text-blue-400">$29</span>
+                            <span class="text-gray-600 dark:text-gray-400">/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                All features
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                Priority support
+                            </li>
+                            <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                Custom branding
+                            </li>
+                        </ul>
+                        <button class="w-full px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors font-bold">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forms Section -->
+            <section id="forms" class="mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 pb-4 border-b-2 border-blue-600">Forms</h2>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Text Input -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                            <input type="email" placeholder="your@email.com" class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-colors">
+                        </div>
+
+                        <!-- Select -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Category</label>
+                            <select class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-colors appearance-none cursor-pointer">
+                                <option>Select an option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                            <textarea placeholder="Enter your message..." class="w-full px-4 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-colors resize-vertical min-h-24"></textarea>
+                        </div>
+
+                        <!-- Checkbox Group -->
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">Preferences</label>
+                            <div class="space-y-3">
+                                <label class="flex items-center cursor-pointer group">
+                                    <input type="checkbox" class="w-4 h-4 border-2 border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer transition-colors">
+                                    <span class="ml-3 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Subscribe to newsletter</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer group">
+                                    <input type="checkbox" class="w-4 h-4 border-2 border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer transition-colors">
+                                    <span class="ml-3 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">I agree to terms</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer group">
+                                    <input type="checkbox" class="w-4 h-4 border-2 border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer transition-colors">
+                                    <span class="ml-3 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">Enable notifications</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Form Buttons -->
+                        <div class="md:col-span-2 flex gap-4">
+                            <button class="px-6 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Submit
+                            </button>
+                            <button class="px-6 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors font-medium">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts Section -->
+            <section id="alerts" class="mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 pb-4 border-b-2 border-blue-600">Alerts</h2>
+
+                <div class="space-y-6">
+                    <!-- Success Alert -->
+                    <div class="flex items-start p-4 bg-green-50 dark:bg-green-900 border-l-4 border-green-500 rounded-lg group hover:shadow-md transition-shadow">
+                        <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-green-800 dark:text-green-200 mb-1">Success</h3>
+                            <p class="text-green-700 dark:text-green-300">Your operation was completed successfully!</p>
+                        </div>
+                        <button class="text-green-500 hover:text-green-700 dark:hover:text-green-300 transition-colors p-2 -mr-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Error Alert -->
+                    <div class="flex items-start p-4 bg-red-50 dark:bg-red-900 border-l-4 border-red-500 rounded-lg group hover:shadow-md transition-shadow">
+                        <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-red-800 dark:text-red-200 mb-1">Error</h3>
+                            <p class="text-red-700 dark:text-red-300">An error occurred. Please try again later.</p>
+                        </div>
+                        <button class="text-red-500 hover:text-red-700 dark:hover:text-red-300 transition-colors p-2 -mr-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Warning Alert -->
+                    <div class="flex items-start p-4 bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-500 rounded-lg group hover:shadow-md transition-shadow">
+                        <svg class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-yellow-800 dark:text-yellow-200 mb-1">Warning</h3>
+                            <p class="text-yellow-700 dark:text-yellow-300">Please review this before proceeding.</p>
+                        </div>
+                        <button class="text-yellow-500 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors p-2 -mr-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Info Alert -->
+                    <div class="flex items-start p-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 rounded-lg group hover:shadow-md transition-shadow">
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-blue-800 dark:text-blue-200 mb-1">Information</h3>
+                            <p class="text-blue-700 dark:text-blue-300">Here's some useful information you should know.</p>
+                        </div>
+                        <button class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300 transition-colors p-2 -mr-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Add interactivity to close buttons in alerts
+        document.querySelectorAll('[class*="border-l-4"]').forEach(alert => {
+            const closeBtn = alert.querySelector('button');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    alert.style.opacity = '0';
+                    alert.style.transform = 'translateX(-100%)';
+                    setTimeout(() => alert.remove(), 300);
+                });
+            }
+        });
+
+        // Add dark mode toggle (optional)
+        const htmlElement = document.documentElement;
+        // Uncomment below to enable dark mode toggle
+        // localStorage.getItem('darkMode') === 'true' && htmlElement.classList.add('dark');
+    </script>
+
+</body>
+</html>
