@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">TailwindUI</a>
+                </div>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Home</a>
+                    <a href="#products" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Products</a>
+                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Features</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Contact</a>
+                    <button class="bg-blue-600 dark:bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium">Sign Up</button>
+                </div>
+
+                <!-- Menu Mobile Button -->
+                <button class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative w-full h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-20 animate-pulse delay-2000"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                Build Amazing Things with <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400">Tailwind</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Create beautiful, responsive websites without writing a single line of CSS. Tailwind CSS is the fastest way to build modern interfaces.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="px-8 py-3 bg-blue-600 dark:bg-blue-500 text-white text-lg font-bold rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Get Started
+                </button>
+                <button class="px-8 py-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 text-lg font-bold rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900 transition-all duration-200">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">Why Choose Tailwind?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Lightning Fast</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Build and ship websites faster than ever before with utility-first CSS.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Highly Customizable</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Customize every aspect of your design system with a simple config file.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Fully Responsive</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Mobile-first design approach that works on all screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-200">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">Our Products</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-600 dark:to-blue-800 group-hover:scale-105 transition-transform duration-300"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Starter</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Perfect for beginners</p>
+                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">$9<span class="text-sm">/mo</span></div>
+                        <button class="w-full bg-blue-600 dark:bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-bold">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purple-600 dark:to-purple-800 group-hover:scale-105 transition-transform duration-300"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Professional</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">For small teams</p>
+                        <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-4">$29<span class="text-sm">/mo</span></div>
+                        <button class="w-full bg-purple-600 dark:bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-700 dark:hover:bg-purple-600 transition-colors font-bold">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 dark:from-green-600 dark:to-green-800 group-hover:scale-105 transition-transform duration-300"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Enterprise</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">For large organizations</p>
+                        <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-4">$99<span class="text-sm">/mo</span></div>
+                        <button class="w-full bg-green-600 dark:bg-green-500 text-white py-2 rounded-lg hover:bg-green-700 dark:hover:bg-green-600 transition-colors font-bold">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 dark:from-orange-600 dark:to-orange-800 group-hover:scale-105 transition-transform duration-300"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Premium</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">All features included</p>
+                        <div class="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-4">$199<span class="text-sm">/mo</span></div>
+                        <button class="w-full bg-orange-600 dark:bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-700 dark:hover:bg-orange-600 transition-colors font-bold">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-800 dark:to-indigo-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-blue-100 dark:text-blue-200 mb-8">Join thousands of developers building amazing websites with Tailwind CSS.</p>
+            <button class="px-8 py-3 bg-white text-blue-600 dark:text-blue-800 font-bold text-lg rounded-lg hover:bg-blue-50 dark:hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                Start Free Trial
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-gray-300 dark:text-gray-400 py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white dark:text-gray-100 mb-4">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white dark:text-gray-100 mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white dark:text-gray-100 mb-4">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Community</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Support</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white dark:text-gray-100 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Terms</a></li>
+                        <li><a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 dark:border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-400 dark:text-gray-500 mb-4 sm:mb-0">&copy; 2024 TailwindUI. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">Twitter</a>
+                    <a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">GitHub</a>
+                    <a href="#" class="hover:text-white dark:hover:text-gray-200 transition-colors">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        @keyframes pulse-delay {
+            0%, 100% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+        
+        .animate-pulse {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .delay-2000 {
+            animation-delay: 2s;
+        }
+    </style>
+
+</body>
+</html>
