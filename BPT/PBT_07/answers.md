@@ -273,3 +273,169 @@ var html = `
     <span>Giá: ${price}đ</span>
 </div>
 `;
+Lỗi 1 — So sánh sai trong if
+Code lỗi
+if (giaSauGiam = 0)
+Vấn đề
+
+Bạn đang dùng:
+
+=
+
+Đây là phép gán, không phải so sánh.
+
+Nó sẽ gán:
+
+giaSauGiam = 0
+
+Sau đó if(0) ⇒ falsy.
+
+Cách sửa
+if (giaSauGiam === 0)
+Lỗi 2 — Truyền "100000" là string
+Code lỗi
+const gia = tinhGiaGiamGia("100000", 20)
+Vấn đề
+
+"100000" là string.
+
+JavaScript có ép kiểu ngầm nên code vẫn chạy, nhưng rất nguy hiểm và dễ bug.
+
+Cách sửa
+const gia = tinhGiaGiamGia(100000, 20)
+Lỗi 3 — Hàm không kiểm tra kiểu dữ liệu
+Vấn đề
+
+Nếu người dùng truyền:
+
+tinhGiaGiamGia("abc", 20)
+
+thì sẽ ra:
+
+NaN
+Cách sửa
+
+Thêm kiểm tra:
+
+if (typeof giaBan !== "number" || typeof phanTramGiam !== "number") {
+    return "Dữ liệu không hợp lệ"
+}
+Lỗi 4 — Không kiểm tra giá âm
+Vấn đề
+
+Giá bán âm:
+
+-100000
+
+là vô lý.
+
+Cách sửa
+if (giaBan < 0) {
+    return "Giá bán không hợp lệ"
+}
+Lỗi 5 — Dùng var thay vì const
+Code
+var giamGia = giaBan * phanTramGiam / 100
+Vấn đề
+
+giamGia không bị thay đổi sau khi tạo.
+
+Nên dùng:
+
+const
+
+để tránh bị sửa nhầm.
+
+Cách sửa
+const giamGia = giaBan * phanTramGiam / 100
+Lỗi 6 — Lỗi “ẩn” với var trong vòng lặp
+Code lỗi
+for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log("Item " + i)
+    }, 1000)
+}
+Output thực tế
+
+Sau 1 giây:
+
+Item 5
+Item 5
+Item 5
+Item 5
+Item 5
+Tại sao?
+
+var có function scope, không có block scope.
+
+Toàn bộ callback setTimeout dùng chung một biến i.
+
+Khi setTimeout chạy:
+
+for
+
+đã kết thúc rồi ⇒ i = 5.
+
+Nên tất cả đều in:
+
+5
+Cách sửa bằng let
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log("Item " + i)
+    }, 1000)
+}
+Vì sao let sửa được?
+
+let có block scope.
+
+Mỗi vòng lặp sẽ tạo một biến i riêng:
+
+vòng 1 → i = 0
+vòng 2 → i = 1
+...
+
+Nên output đúng:
+
+Item 0
+Item 1
+Item 2
+Item 3
+Item 4
+Phiên bản code đã sửa hoàn chỉnh
+function tinhGiaGiamGia(giaBan, phanTramGiam) {
+
+    if (typeof giaBan !== "number" || typeof phanTramGiam !== "number") {
+        return "Dữ liệu không hợp lệ";
+    }
+
+    if (giaBan < 0) {
+        return "Giá bán không hợp lệ";
+    }
+
+    if (phanTramGiam < 0 || phanTramGiam > 100) {
+        return "Phần trăm giảm không hợp lệ";
+    }
+
+    const giamGia = giaBan * phanTramGiam / 100;
+    const giaSauGiam = giaBan - giamGia;
+
+    if (giaSauGiam === 0) {
+        console.log("Sản phẩm miễn phí!");
+    }
+
+    return giaSauGiam;
+}
+
+// Test
+const gia = tinhGiaGiamGia(100000, 20);
+console.log("Giá sau giảm: " + gia + "đ");
+
+const gia2 = tinhGiaGiamGia(50000, 110);
+console.log("Giá: " + gia2);
+
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log("Item " + i);
+    }, 1000);
+}
