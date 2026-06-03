@@ -1,0 +1,37 @@
+=== PIPE FUNCTION ===
+Kết quả: 20
+Kết quả: 30
+
+=== MEMOIZE FUNCTION ===
+Đang tính...
+499999500000
+499999500000
+Đang tính...
+4950
+4950
+
+=== DEBOUNCE FUNCTION ===
+(Demo: chờ user ngừng gõ 500ms rồi mới search)
+
+=== RETRY FUNCTION ===
+Attempt 1/3 failed: Connection timeout
+Attempt 2/3 failed: Connection timeout
+Result: Success! Data fetched.
+
+=== COMPOSE FUNCTION (reverse pipe) ===
+Result: 20
+
+=== CURRY FUNCTION ===
+6
+6
+6
+6
+
+=== ONCE FUNCTION ===
+Initializing system...
+System ready
+System ready
+System ready
+
+=== DEBOUNCE DEMO ===
+Searching: javas
