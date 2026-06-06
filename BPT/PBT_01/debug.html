@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopTLU - Trang web được sửa</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav {
+        background-color: #34495e;
+        padding: 1rem 0;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #2980b9;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      section {
+        background-color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+      }
+
+      section h2 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 0.5rem;
+      }
+
+      article {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
+        border-left: 4px solid #3498db;
+      }
+
+      article h3 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      article p {
+        margin-bottom: 0.5rem;
+        color: #555;
+      }
+
+      article img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+
+      .price {
+        font-size: 1.5rem;
+        color: #e74c3c;
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      thead {
+        background-color: #3498db;
+        color: white;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 0.8rem;
+        text-align: left;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      aside {
+        background-color: #e8f4f8;
+        padding: 1.5rem;
+        border-radius: 4px;
+        margin: 2rem 0;
+        border-left: 4px solid #3498db;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FIX 1: Properly closed DOCTYPE declaration -->
+    <!-- FIX 2: Added lang attribute to html tag for accessibility -->
+
+    <header>
+      <!-- FIX 3: Used <header> semantic tag instead of <div> -->
+      <h1>ShopTLU</h1>
+      <!-- FIX 4: Added proper heading hierarchy -->
+    </header>
+
+    <nav>
+      <!-- FIX 5: Used <nav> semantic tag instead of <div> -->
+      <ul>
+        <!-- FIX 6: Wrapped navigation items in proper <ul> and <li> -->
+        <li><a href="/">Trang chủ</a></li>
+        <!-- FIX 7: Fixed broken link structure - removed unclosed tag and reorganized -->
+        <li><a href="/products">Sản phẩm</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- FIX 8: Used <main> semantic tag instead of <div> -->
+
+      <section>
+        <!-- FIX 9: Used <section> semantic tag instead of <div> -->
+        <h2>Welcome to ShopTLU</h2>
+
+        <article>
+          <!-- FIX 10: Used <article> semantic tag for product content -->
+          <h3>Sản phẩm hot</h3>
+
+          <img
+            src="https://placehold.co/300x200?text=iPhone+16+Pro"
+            alt="iPhone 16 Pro"
+          />
+          <!-- FIX 11: Changed image source to placeholder and added proper alt text -->
+
+          <p>iPhone 16 Pro</p>
+
+          <span class="price">25.990.000đ</span>
+          <!-- FIX 12: Fixed price formatting - removed incomplete bold tag and extra characters -->
+        </article>
+      </section>
+
+      <section>
+        <!-- FIX 13: Used <section> semantic tag -->
+        <h2>Thông tin</h2>
+
+        <table>
+          <!-- FIX 14: Properly structured table with semantic elements -->
+          <thead>
+            <tr>
+              <th>Tên</th>
+              <th>Giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>iPhone</td>
+              <td>25.990.000đ</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <aside>
+      <!-- FIX 15: Used <aside> semantic tag for sidebar -->
+      <h3>Sidebar content</h3>
+      <p>Nội dung sidebar thêm vào đây</p>
+    </aside>
+
+    <footer>
+      <!-- FIX 16: Used <footer> semantic tag instead of <div> -->
+      <p>&copy; 2026 ShopTLU</p>
+      <!-- FIX 17: Added proper copyright symbol entity and year -->
+    </footer>
+  </body>
+</html>
